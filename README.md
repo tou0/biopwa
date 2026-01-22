@@ -101,4 +101,4 @@ BioQuartier/
 ## Auteur
 
 **tou**
-Projet réalisé dans le cadre du BUT R&T.
+* Projet réalisé dans le cadre du BUT R&T.
