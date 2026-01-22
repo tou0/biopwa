@@ -23,6 +23,14 @@ Je me suis alors demandé : *"Comment rendre ça addictif ?"*. Je me suis inspir
 Quand j'ai commencé à coder le scanner, je voulais que l'utilisateur garde ses photos sur son téléphone. J'ai essayé de les stocker "simplement" (LocalStorage), mais la mémoire a saturé après 3 photos...
 J'ai dû trouver une astuce de contournement (expliquée plus bas) pour stocker des centaines de photos sans faire planter l'appli.
 
+**Citation du site iNaturalist**
+``` text
+iNaturalist vous offre un endroit où enregistrer et organiser vos découvertes sur la nature, rencontrer d'autres amateurs de la nature, et en en apprendre plus sur le monde naturel.
+Nous encourageons la participation d'une large variété d'amoureux de la nature, comprenant entre autres randonneurs, chasseurs, ornithologues, chercheurs de plage, cueilleurs de champignons et pêcheurs. 
+
+
+Par la mise en relation de leurs différentes perceptions et de leur expertise du monde naturel, iNaturalist espère engendrer une initiative efficace de sensibilisation à la biodiversité locale au sein de la communauté ainsi que de promouvoir une exploration approfondie des environnements locaux.
+```
 ---
 
 ## Ce qu'on peut faire avec l'App
