@@ -3,6 +3,8 @@ Le "Pokémon GO" de la biodiversité : Scannez, Identifiez, Collectionnez.
 
 BioQuartier est une application web mobile (PWA) qui transforme vos balades en chasse au trésor. Le but ? Trouver les espèces autour de vous, les prendre en photo pour les identifier grâce à une IA, et remplir votre propre "Bio-Dex".
 
+Ne volez pas la clé API, la création d'un compte PlantNet est gratuite...
+
 **Démo en ligne :** https://srv-peda2.iut-acy.univ-smb.fr/levelm/bio
 
 ---
@@ -38,7 +40,7 @@ Vous voyez une plante inconnue ?
 Chaque plante scannée est ajoutée à votre carnet.
 * **Gamification** Plus vous identifiez de plantes, plus vous montez en niveau.
 * **Souvenirs :** Vos photos sont sauvegardées dans le téléphone.
-* 
+  
 ---
 
 ## Les Défis Techniques
@@ -56,37 +58,44 @@ Pour ne pas me perdre dans mon code, j'ai tout rangé dans des fichiers séparé
 
 ---
 
-## Outils utilisés
+## Stack Technique
 
 * **Langage :** JavaScript 
 * **Carte :** Leaflet.
-* **Données :** API iNaturalist (pour trouver) & API PlantNet (pour identifier).
 * **Design :** Bootstrap 5.
-
+* **APIs Externes (Internet) :**
+    * **iNaturalist :** Pour récupérer les données de biodiversité.
+    * **PlantNet :** Pour l'identification par IA.
+* **APIs Internes (Navigateur) :**
+    * **Geolocation API :** Pour le GPS.
+    * **Cache Storage API :** Pour le stockage des photos.
+    * **Canvas API :** Pour la compression des images.
+    * **Vibration API :** Pour le retour haptique (petites vibrations).
 ---
 
 ## Organisation du dossier
 
-BioQuartier/ 
-├── index.html           # La page principale 
-├── camera.html          # La page pour scanner les plantes 
-├── carte.html           # La page qui contient la carte
-├── carnet.html          # La page qui contient le BioDex
-├── favoris.html         # La page contenant les favoris de l'utilisateur
-├── service_worker.js    # Ce qui permet à l'app de marcher hors-ligne 
-├── css/                 # Le design 
+```text
+BioQuartier/
 ├── audio/               # L'easter egg
-├── img/                 # L'easter egg aussi
+├── css/                 # Le design
 ├── favicon/             # Assets graphiques & Manifest
+├── img/                 # L'easter egg aussi
 ├── js/ 
 │   ├── globals.js       # Les réglages 
 │   ├── main.js          # Les clics et boutons  
 │   ├── logic.js         # Le cerveau du jeu (API, Badges...) 
 │   ├── utils.js         # La boîte à outils (Compression, Cache)  
-│   └── pwa.js           # L'installation sur mobile 
-└── manifest.json        # L'icône et le nom de l'app
+│   └── pwa.js           # L'installation sur mobile
+├── lib/                 # Les bibliothèques 
+├── index.html           # La page principale 
+├── camera.html          # La page pour scanner les plantes 
+├── carte.html           # La page qui contient la carte
+├── carnet.html          # La page qui contient le BioDex
+├── favoris.html         # La page contenant les favoris de l'utilisateur
+└── service_worker.js    # Ce qui permet à l'app de marcher hors-ligne 
 
-
+```
 ---
 
 ## Auteur
