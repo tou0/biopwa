@@ -1,0 +1,71 @@
+.espece-img { 
+    height: 200px; 
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+/* --- Style partagé pour les boutons de la Navbar (Install & Favoris) --- */
+.btn-custom-nav {
+    background-color: #ffffff;      /* Fond blanc pur */
+    color: #198754;                 /* Texte vert (couleur du thème) */
+    border: 2px solid #ffffff;      /* Bordure blanche */
+    border-radius: 20px;            /* Bords très arrondis (pilule) */
+    font-weight: bold;              /* Texte en gras */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Légère ombre */
+    transition: all 0.3s ease;      /* Animation fluide */
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;          /* Important pour les balises <a> */
+    display: inline-block;          /* Assure le bon alignement */
+}
+
+.btn-custom-nav:hover {
+    background-color: transparent;  /* Fond transparent au survol */
+    color: #ffffff;                 /* Texte devient blanc */
+    transform: translateY(-2px);    /* Le bouton monte légèrement */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    border-color: #ffffff;          /* On garde la bordure blanche */
+}
+
+/* --- STYLE DES CARTES (Card Design) --- */
+
+.card {
+    border: none;                       /* On retire la bordure grise basique de Bootstrap */
+    border-radius: 16px;                /* Coins plus arrondis pour un look moderne */
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animation fluide et naturelle */
+    overflow: hidden;                   /* Important pour que l'image ne dépasse pas les coins ronds */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Ombre légère par défaut */
+}
+
+/* Effet au survol (PC) ou au focus (Mobile) */
+.card:hover {
+    transform: translateY(-8px);        /* La carte monte de 8 pixels */
+    box-shadow: 0 15px 30px rgba(25, 135, 84, 0.15); /* L'ombre grandit et devient légèrement verte */
+}
+
+/* --- STYLE DE L'IMAGE --- */
+
+.espece-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;    /* Animation plus lente pour l'image */
+}
+
+/* Quand on survole la carte, l'image zoome légèrement */
+.card:hover .espece-img {
+    transform: scale(1.05);
+}
+
+/* --- TYPOGRAPHIE --- */
+
+.card-title {
+    font-weight: 700;                   /* Titre en gras */
+    color: #2c3e50;                     /* Gris foncé bleuté (plus élégant que le noir pur) */
+    font-size: 1.1rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}

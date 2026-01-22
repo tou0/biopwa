@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mon Carnet - BioQuartier</title>
+
+  <link rel="icon" type="image/png" href="./favicon/favicon.ico">
+  <link href="./lib/bootstrap.min.css" rel="stylesheet">
+  <link href="./lib/bootstrap-icons-1.13.1/bootstrap-icons.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="theme-color" content="#198754">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-success mb-3">
+    <div class="container-fluid d-flex flex-wrap align-items-center">
+      <span class="navbar-brand mb-0 h1">
+        <i class="bi bi-journal-bookmark-fill"></i> Bio-Dex
+      </span>
+
+      <div class="d-flex gap-2 ms-auto mt-1">
+        <a href="index.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-house-door-fill"></i>
+        </a>
+        <a href="favoris.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-heart-fill text-danger"></i> Fav
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container pb-5">
+
+    <div class="card mb-4 shadow-sm border-success">
+      <div class="card-body text-center">
+        <h5 class="card-title text-muted mb-3">Mon Niveau de Botaniste</h5>
+
+        <h2 id="rank-title" class="fw-bold text-success display-6">Graine 🌱</h2>
+
+        <div class="progress mt-3 mb-2" style="height: 20px; border-radius: 10px; background-color: #e9ecef;">
+          <div id="rank-progress" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+        </div>
+
+        <p id="rank-next-msg" class="small text-muted fst-italic">Encore quelques découvertes...</p>
+
+        <hr>
+
+        <div class="d-flex justify-content-around">
+          <div class="text-center">
+            <span class="d-block fw-bold fs-4" id="total-count">0</span>
+            <span class="small text-muted">Plantes</span>
+          </div>
+          <div class="text-center">
+            <span class="d-block fw-bold fs-4 text-warning">
+              <i class="bi bi-trophy-fill"></i>
+            </span>
+            <span class="small text-muted">Collection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <a href="camera.html" class="btn btn-modern btn-main w-100 py-2 shadow-sm">
+        <i class="bi bi-camera-fill"></i> Scanner une nouvelle plante
+      </a>
+    </div>
+
+    <h4 class="fw-bold mb-3">Mes Découvertes</h4>
+    <div id="dex-container" class="row g-3">
+    </div>
+
+    <div id="dex-empty" class="text-center mt-5 text-muted d-none">
+      <p>Votre carnet est vide.</p>
+      <a href="camera.html" class="btn btn-modern btn-main">
+        <i class="bi bi-camera-fill"></i> Scanner une plante
+      </a>
+    </div>
+  </div>
+
+  <script src="js/globals.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

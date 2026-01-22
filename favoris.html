@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mes Favoris - BioQuartier</title>
+
+  <link href="./lib/bootstrap.min.css" rel="stylesheet">
+  <link href="./lib/bootstrap-icons-1.13.1/bootstrap-icons.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="./favicon/favicon.ico">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <meta name="theme-color" content="#198754">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-success mb-4">
+    <div class="container-fluid d-flex flex-wrap align-items-center">
+      <span class="navbar-brand mb-0 h1">
+        <i class="bi bi-heart-fill text-danger"></i> Favoris
+      </span>
+
+      <div class="d-flex gap-2 ms-auto mt-1">
+        <a href="index.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-house-door-fill"></i>
+        </a>
+        <a href="carnet.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-journal-text"></i> Carnet
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card mb-3 bg-light border-0 shadow-sm">
+      <div class="card-body text-center">
+        <h6 class="card-subtitle mb-2 text-muted">Mes Badges Explorateur</h6>
+        <div id="badges-container" class="fs-1">
+          <span class="opacity-25">🥚</span>
+        </div>
+        <p id="next-badge-msg" class="small text-muted m-0">Encore quelques favoris pour évoluer !</p>
+      </div>
+    </div>
+
+    <div id="favorites-container" class="row g-3"></div>
+
+    <div id="msg-vide" class="text-center mt-5 text-muted" style="display:none;">
+      <p>Vous n'avez pas encore de favoris.</p>
+      <a href="index.html" class="btn btn-modern btn-main">
+        <i class="bi bi-search"></i> Aller en chercher
+      </a>
+    </div>
+  </div>
+
+  <script src="js/globals.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

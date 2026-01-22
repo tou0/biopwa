@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://api.inaturalist.org;">
+
+  <meta name="apple-mobile-web-app-title" content="BioQuartier">
+  <meta name="theme-color" content="#198754">
+
+  <meta name="author" content="prenom.nom@etu.univ-smb.fr" />
+  <meta name="description" content="Ma première PWA">
+
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  <link rel="icon" type="image/png" href="./favicon/favicon.ico">
+
+  <link href="./lib/bootstrap.min.css" rel="stylesheet">
+  <link href="./lib/bootstrap-icons-1.13.1/bootstrap-icons.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
+
+  <title>BioQuartier</title>
+
+  <meta name="author" content="mathis.level@etu.univ-smb.fr" />
+  <meta property="og:locale" content="fr">
+
+  <meta property="og:url" content="https://srv-peda2.iut-acy.univ-smb.fr/levelm/bio/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BioQuartier">
+  <meta property="og:description" content="Your own PlantDex">
+  <meta property="og:image" content="https://srv-peda2.iut-acy.univ-smb.fr/levelm/bio/favicon/og-image-1200x630.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="srv-peda2.iut-acy.univ-smb.fr">
+  <meta property="twitter:url" content="https://srv-peda2.iut-acy.univ-smb.fr/levelm/bio/index.html">
+  <meta name="twitter:title" content="BioQuartier">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://srv-peda2.iut-acy.univ-smb.fr/levelm/bio/favicon/og-image-1200x630.png">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-success mb-4">
+    <div class="container-fluid d-flex flex-wrap align-items-center">
+      <span class="navbar-brand mb-0 h1">
+        <i class="bi bi-tree-fill"></i> BioQuartier
+      </span>
+
+      <div class="d-flex flex-wrap gap-2 align-items-center ms-auto mt-1">
+        <button id="install_button" class="btn btn-sm btn-custom-nav" style="display:none;" disabled>
+          <i class="bi bi-download"></i> Installer
+        </button>
+        <a href="favoris.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-heart-fill text-danger"></i> Fav
+        </a>
+        <a href="carnet.html" class="btn btn-sm btn-custom-nav">
+          <i class="bi bi-journal-text"></i> Carnet
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-3 fw-bold">Explorateur</h5>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+          <button id="btn-locate" class="btn btn-modern btn-main">
+            <i class="bi bi-geo-alt-fill"></i> Autour de moi
+          </button>
+
+          <a href="carte.html" class="btn btn-modern btn-sub">
+            <i class="bi bi-map-fill"></i> Carte
+          </a>
+
+          <a href="camera.html" class="btn btn-modern btn-sub">
+            <i class="bi bi-camera-fill"></i> Identifier
+          </a>
+        </div>
+        <div id="status-msg" class="text-center text-muted small mb-2">Prêt.</div>
+
+        <hr>
+
+        <label for="radius-slider" class="form-label small fw-bold">Rayon : <span id="radius-value">1</span> km</label>
+        <input type="range" class="form-range" min="1" max="20" step="1" id="radius-slider" value="1">
+
+        <div class="d-flex gap-2 overflow-auto pb-2 mt-2" id="filters-container">
+          <button class="filter-btn active" data-taxa="">Tout</button>
+
+          <button class="filter-btn" data-taxa="Aves">🐦 Oiseaux</button>
+          <button class="filter-btn" data-taxa="Plantae">🌿 Plantes</button>
+          <button class="filter-btn" data-taxa="Insecta">🐞 Insectes</button>
+          <button class="filter-btn" data-taxa="Mammalia">🦊 Mammifères</button>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="border-bottom pb-2 mt-4">Espèces proches</h3>
+    <div id="results-container" class="row g-3"></div>
+
+  </div>
+
+  <script src="js/pwa.js"></script>
+  <script src="js/globals.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
