@@ -31,6 +31,13 @@ Nous encourageons la participation d'une large variété d'amoureux de la nature
 
 Par la mise en relation de leurs différentes perceptions et de leur expertise du monde naturel, iNaturalist espère engendrer une initiative efficace de sensibilisation à la biodiversité locale au sein de la communauté ainsi que de promouvoir une exploration approfondie des environnements locaux.
 ```
+
+**Citation du site PlantNet**
+```text
+Pl@ntNet API provides a computational access to the visual identification engine used in Pl@ntNet apps in the form of a RESTful Web service.
+The service allows you to submit simultaneously from 1 to 5 images of the same plant and to have in return the list of the most likely species as well as a confidence score for each of them.
+The identification engine is based on most advanced deep learning technologies and is regularly updated thanks to the contributions of the community and the integration of new expert databases.
+```
 ---
 
 ## Ce qu'on peut faire avec l'App
@@ -112,3 +119,7 @@ BioQuartier/
 
 **tou**
 * Projet réalisé dans le cadre du BUT R&T.
+
+# Remerciements
+
+Je tiens à remercier les différentes API, iNaturalist et PlantNet.
