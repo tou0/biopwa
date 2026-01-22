@@ -1,3 +1,5 @@
+# /!\ BOOTSTRAP ICONS TO ADD
+
 # BioQuartier v1.0
 Le "Pokémon GO" de la biodiversité : Scannez, Identifiez, Collectionnez.
 
