@@ -71,7 +71,7 @@ Chaque plante scannée est ajoutée à votre carnet.
 * **La solution :** Avant d'envoyer la photo, mon code la redessine en tout petit et en moins bonne qualité (invisible à l'œil nu sur mobile) grâce à un outil appelé **Canvas**. La photo devient 30 fois plus légère instantanément.
 
 ### 3. Un code propre 
-Pour ne pas me perdre dans mon code, j'ai tout rangé dans des fichiers séparés (un pour la carte, un pour les outils, un pour la logique du jeu...). J'utilise aussi du JavaScript moderne (**Async/Await**) pour que le code soit facile à lire, comme une histoire.
+Pour ne pas me perdre dans mon code, j'ai tout rangé dans des fichiers séparés (un pour les constantes globales, un pour les utilitaires, un pour la logique du jeu...). J'utilise aussi du JavaScript moderne (**Async/Await**) pour que le code soit facile à lire.
 
 ---
 
